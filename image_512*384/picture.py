@@ -43,7 +43,9 @@ for jpgfile in glob.glob("C:\\Users\\hanwa\\Desktop\\before\*.*"):
     a = detect(jpgfile)
     if a == 0:
         convertjpg_43(jpgfile,"C:\\Users\\hanwa\\Desktop\\after")
-   elif a == 2:
+    elif a == 1:
+        convertjpg_34(jpgfile,"C:\\Users\\hanwa\\Desktop\\after")
+    elif a == 2:
         print('Sorry, please use Photoshop to edit this picture\n')
     else:
         print('Wrong')
