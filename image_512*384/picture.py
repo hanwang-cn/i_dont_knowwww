@@ -46,6 +46,6 @@ for jpgfile in glob.glob("C:\\Users\\hanwa\\Desktop\\before\*.*"):
     elif a == 1:
         convertjpg_34(jpgfile,"C:\\Users\\hanwa\\Desktop\\after")
     elif a == 2:
-        print('Sorry, please use Photoshop to edit this picture\n')
+        print('Sorry, please use Photoshop to edit this picture:\n',os.path.basename(jpgfile))
     else:
-        print('Wrong')
+        print('Wrong in Editing this picture:',os.path.basename(jpgfile))
