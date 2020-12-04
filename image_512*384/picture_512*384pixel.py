@@ -48,4 +48,4 @@ for jpgfile in glob.glob("C:\\Users\\hanwa\\Desktop\\before\*.*"):
     elif a == 2:
         print('Sorry, please use Photoshop to edit this picture:\n',os.path.basename(jpgfile))
     else:
-        print('Wrong in Editing this picture:',os.path.basename(jpgfile))
+        print('Wrong in Editing this picture,perhaps it is not the jpeg format:',os.path.basename(jpgfile))
