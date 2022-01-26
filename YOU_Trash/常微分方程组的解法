@@ -1,0 +1,16 @@
+from scipy.integrate import solve_ivp, odeint
+import numpy as np
+import matplotlib.pyplot as plt
+
+def deriv(t, w):
+    n1, x1 = w.tolist()
+    return n1*np.log(0.9*x1/n1), -0.01*x1*n1
+
+t=np.linspace(0,500,1500,endpoint=True)
+y_1=solve_ivp(deriv,(0,500),y0=(1,200),method='RK45', t_eval=t)
+
+plt.subplot(121)
+plt.plot(t.T,y_1.y[0],'g--')
+plt.subplot(122)
+plt.plot(t.T,y_1.y[1],'r.')
+plt.show()
