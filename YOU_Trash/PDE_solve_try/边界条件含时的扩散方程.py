@@ -26,9 +26,8 @@ bc_T='(-0.29)*c.diff(x)+(0.00015/0.29)*(Piecewise( \
     (255+273.15,And(273.5<tt,tt<=344.5)), \
     (255-(230/91)*tt+273.15,And(344.5<tt,tt<=435.5)), \
     (25+273.15,And(435.5<tt,tt<=500))).subs(tt,t))'
-#bc_T='(-0.29)*c.diff(x)+(0.00015/0.29)*(Piecewise((25+273.15,And(0<=tt,tt<=250)),(255+273.15,And(250<tt,tt<=500))))'
-#bc_T='(0.00015/0.29)*(Piecewise((25+273.15,And(0<=tt,tt<=250)),(255+273.15,And(250<tt,tt<=500))).subs(tt,t))'
-grid = CartesianGrid([[0, x_max]], [int(xstep)])#,periodic=False)
+
+grid = CartesianGrid([[0, x_max]], [int(xstep)])
 state=ScalarField(grid=grid,data=T_origin+T_Kelvin)
 
 eq = PDE(rhs={'c': 'a*laplace(c)'}, 
